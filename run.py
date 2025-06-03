@@ -8,7 +8,7 @@ try:
     USE_FIXED_CONFIG = True
     print("🔧 Menggunakan konfigurasi yang diperbaiki (v2.0)")
 except ImportError:
-    from data.config import SIMULATION_CONFIG  
+    from data.config_fixed import SIMULATION_CONFIG  
     USE_FIXED_CONFIG = False
     print("⚠️  Menggunakan konfigurasi default")
 
