@@ -91,7 +91,7 @@ WOLF_BIOLOGICAL_DATA = {
         'gestation_period_days': 63,          # 9 minggu
         'litter_size': (4, 6),               # Rata-rata 5 anak
         'litters_per_year': 1,               # Sekali per tahun
-        'sexual_maturity_years': 2,          # 2 tahun
+        'sexual_maturity_years': 0.12,          # 2 tahun
         'breeding_season': 'Feb-March',      # Musim kawin singkat
         'alpha_breeding_only': True,         # Hanya alpha yang kawin
         'pack_breeding_rate': 0.6,           # 60% pack berhasil reproduce

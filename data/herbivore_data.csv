@@ -1,0 +1,16 @@
+parameter,value,data_type,description
+species_name,Kelinci_Eropa_GBIF,str,Nama spesies dari data GBIF
+initial_population,75,int,Populasi awal yang lebih tinggi
+reproduction_rate,0.4,float,Tingkat reproduksi per hari (lebih tinggi)
+mortality_rate,0.015,float,Tingkat mortalitas per hari
+consumption_rate,18.5,float,Konsumsi makanan per hari
+mobility,2,int,Jarak bergerak per hari (grid cells)
+initial_energy,120.0,float,Energi awal yang lebih tinggi
+reproduction_threshold,70.0,float,Energi minimum untuk reproduksi
+metabolic_cost,2.8,float,Biaya metabolik per hari (lebih efisien)
+min_temp,2.0,float,Suhu minimum toleransi (Celsius)
+max_temp,35.0,float,Suhu maksimum toleransi (Celsius)
+min_humidity,30.0,float,Kelembaban minimum toleransi (persen)
+max_humidity,90.0,float,Kelembaban maksimum toleransi (persen)
+max_age,800,int,Usia maksimum dalam hari (2.2 tahun)
+foraging_efficiency,0.92,float,Efisiensi mencari makan (0-1)

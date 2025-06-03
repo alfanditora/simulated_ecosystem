@@ -5,9 +5,9 @@ Berdasarkan analisis kepunahan dini dan data biologis yang lebih akurat
 
 # Parameter Simulasi Umum
 SIMULATION_CONFIG = {
-    'grid_width': 30,
-    'grid_height': 30,
-    'max_steps': 500,
+    'grid_width': 50,
+    'grid_height': 50,
+    'max_steps': 50,
     'carrying_capacity': 200,
     'show_progress_every': 25,  # Lebih sering untuk monitoring
     'save_data': True
@@ -18,15 +18,15 @@ SIMULATION_CONFIG = {
 
 ELK_CONFIG = {
     'species_name': 'Elk',
-    'initial_population': 20,              # Berdasarkan ratio Yellowstone: 95 wolves : 7000-12000 elk
+    'initial_population': 40,              # Berdasarkan ratio Yellowstone: 95 wolves : 7000-12000 elk
     
     # Parameter biologis elk
-    'reproduction_rate': 0.002,            # Lebih rendah dari kelinci
-    'mortality_rate': 0.001,               # Rendah karena ukuran besar
+    'reproduction_rate': 0.4,            # Lebih rendah dari kelinci
+    'mortality_rate': 0.01,               # Rendah karena ukuran besar
     'consumption_rate': 25.0,              # 60% lebih banyak dari kelinci
     'mobility': 2,                         # Sama dengan kelinci
     'initial_energy': 150.0,               # 50% lebih besar
-    'reproduction_threshold': 120.0,       # Lebih tinggi
+    'reproduction_threshold': 100.0,       # Lebih tinggi
     'metabolic_cost': 6.0,                 # 50% lebih tinggi dari kelinci
     
     # Toleransi lingkungan - lebih hardy
@@ -53,12 +53,12 @@ HERBIVORE_CONFIG = {
     
     # Parameter reproduksi dan mortalitas (sudah dikalibrasi dengan baik)
     'reproduction_rate': 0.3,           # 0.3% per hari - realistic
-    'mortality_rate': 0.002,              # Sedikit dinaikkan karena predasi
+    'mortality_rate': 0.02,              # Sedikit dinaikkan karena predasi
     'consumption_rate': 15.0,             # Kebutuhan makanan harian
     'mobility': 1,                        # Pergerakan harian
     'initial_energy': 100.0,
-    'reproduction_threshold': 90.0,       # Sedikit dikurangi
-    'metabolic_cost': 4.0,                # Sedikit dikurangi
+    'reproduction_threshold': 60.0,       # Sedikit dikurangi
+    'metabolic_cost': 3.0,                # Sedikit dikurangi
     
     # Toleransi lingkungan
     'min_temp': 5.0,
@@ -80,11 +80,11 @@ CARNIVORE_CONFIG = {
     'initial_population': 50,              # Dikurangi sedikit untuk stabilitas awal
     
     # PARAMETER UTAMA YANG DIPERBAIKI
-    'reproduction_rate': 0.012,          # Sedikit dinaikkan untuk kompensasi
+    'reproduction_rate': 0.5,          # Sedikit dinaikkan untuk kompensasi
     'mortality_rate': 0.0006,             # Dikurangi dari 0.0004
     'mobility': 4,                        # Tetap
-    'initial_energy': 150.0,              # Dinaikkan untuk buffer
-    'reproduction_threshold': 85.0,       # Dinaikkan
+    'initial_energy': 250.0,              # Dinaikkan untuk buffer
+    'reproduction_threshold': 65.0,       # Dinaikkan
     'metabolic_cost': 3.0,                # ⭐ DIPERBAIKI: 8.0 → 3.0
     
     # Toleransi lingkungan
@@ -95,10 +95,10 @@ CARNIVORE_CONFIG = {
     'max_age': 2190,                      # 6 tahun
     
     # PARAMETER PREDASI YANG DIPERBAIKI
-    'predation_rate': 0.15,               # ⭐ DIPERBAIKI: 0.3 → 0.15 (solo hunting)
-    'conversion_efficiency': 0.75,        # ⭐ DIPERBAIKI: 0.6 → 0.75 (lebih efisien)
+    'predation_rate': 0.25,               # ⭐ DIPERBAIKI: 0.3 → 0.15 (solo hunting)
+    'conversion_efficiency': 0.85,        # ⭐ DIPERBAIKI: 0.6 → 0.75 (lebih efisien)
     'hunt_range': 8,
-    'energy_per_kill': 40.0,              # ⭐ DIPERBAIKI: 60.0 → 40.0 (lebih realistis)
+    'energy_per_kill': 50.0,              # ⭐ DIPERBAIKI: 60.0 → 40.0 (lebih realistis)
     'hunting_cost': 1.0,                  # ⭐ DIPERBAIKI: 10.0 → 4.0
     
     # PARAMETER BARU UNTUK STABILITAS

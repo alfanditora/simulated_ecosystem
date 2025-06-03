@@ -124,24 +124,24 @@ def main():
                     print("   ⚠️  SUBOPTIMAL: Rasio di luar range")
     
     # Buat visualisasi
-    # print("\n🎨 Membuat visualisasi...")
-    # try:
-    #     stats = sim.get_statistics()
-    #     if "error" not in stats:
-    #         create_plots(stats)
-    #     else:
-    #         print(f"⚠️  Visualisasi dilewati: {stats['error']}")
-    # except Exception as e:
-    #     print(f"❌ Error visualisasi: {e}")
-    #     print("💡 Pastikan matplotlib terinstall: pip install matplotlib")
+    print("\n🎨 Membuat visualisasi...")
+    try:
+        stats = sim.get_statistics()
+        if "error" not in stats:
+            create_plots(stats)
+        else:
+            print(f"⚠️  Visualisasi dilewati: {stats['error']}")
+    except Exception as e:
+        print(f"❌ Error visualisasi: {e}")
+        print("💡 Pastikan matplotlib terinstall: pip install matplotlib")
     
-    # print("\n" + "=" * 60)
-    # print("✅ SIMULASI SELESAI!")
-    # print("📊 Cek grafik yang muncul untuk analisis detail")
-    # if USE_FIXED_CONFIG:
-    #     print("🔧 Menggunakan parameter yang diperbaiki berdasarkan data biologis")
-    # print("🔄 Jalankan ulang untuk simulasi dengan seed berbeda")
-    # print("=" * 60)
+    print("\n" + "=" * 60)
+    print("✅ SIMULASI SELESAI!")
+    print("📊 Cek grafik yang muncul untuk analisis detail")
+    if USE_FIXED_CONFIG:
+        print("🔧 Menggunakan parameter yang diperbaiki berdasarkan data biologis")
+    print("🔄 Jalankan ulang untuk simulasi dengan seed berbeda")
+    print("=" * 60)
 
 if __name__ == "__main__":
     main()
